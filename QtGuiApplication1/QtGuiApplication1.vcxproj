@@ -1,0 +1,134 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="14.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{B12702AD-ABFB-343A-A199-8E24837244A3}</ProjectGuid>
+    <Keyword>Qt4VSv1.0</Keyword>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <PlatformToolset>v140</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <PlatformToolset>v140</PlatformToolset>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings" />
+  <ImportGroup Label="Shared" />
+  <ImportGroup Label="PropertySheets" />
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <OutDir>$(SolutionDir)$(Platform)\$(Configuration)\</OutDir>
+    <GenerateManifest>false</GenerateManifest>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <OutDir>$(SolutionDir)$(Platform)\$(Configuration)\</OutDir>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <PreprocessorDefinitions>UNICODE;WIN32;WIN64;QT_DLL;QT_CORE_LIB;QT_GUI_LIB;QT_WIDGETS_LIB;_WINDOWS;_DEBUG;DISABLE_OPENNI;DISABLE_ENSENSO;DISABLE_DAVIDSDK;DISABLE_DSSDK;DISABLE_RSSDK;DISABLE_PCAP;DISABLE_PNG;vtkRenderingContext2D_AUTOINIT=1(vtkRenderingContextOpenGL);vtkRenderingCore_INCLUDE="E:/pcl_viewer/build/CMakeFiles/vtkRenderingCore_AUTOINIT_vtkInteractionStyle_vtkRenderingFreeType_vtkRenderingOpenGL.h";vtkRenderingVolume_AUTOINIT=1(vtkRenderingVolumeOpenGL);EIGEN_USE_NEW_STDVECTOR;EIGEN_YES_I_KNOW_SPARSE_MODULE_IS_NOT_STABLE_YET;BOOST_ALL_NO_LIB;FLANN_STATIC;CMAKE_INTDIR="Debug";%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>.\GeneratedFiles;.;$(QTDIR)\include;.\GeneratedFiles\$(ConfigurationName);$(QTDIR)\include\QtCore;$(QTDIR)\include\QtGui;$(QTDIR)\include\QtWidgets;C:\Program Files\PCL 1.8.0\3rdParty\VTK\include\vtk-7.0;C:\Program Files\PCL 1.8.0\include\pcl-1.8;C:\Program Files\PCL 1.8.0\3rdParty\Eigen\eigen3;C:\Program Files\PCL 1.8.0\3rdParty\Boost\include\boost-1_61;C:\Program Files\PCL 1.8.0\3rdParty\OpenNI2\Include;C:\Program Files\PCL 1.8.0\3rdParty\FLANN\include;C:\Program Files\PCL 1.8.0\3rdParty\Qhull\include;C:\Program Files\PCL 1.8.0\3rdParty\VTK\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <Optimization>Disabled</Optimization>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+      <TreatWChar_tAsBuiltInType>true</TreatWChar_tAsBuiltInType>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <OutputFile>$(OutDir)\$(ProjectName).exe</OutputFile>
+      <AdditionalLibraryDirectories>$(QTDIR)\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalDependencies>kernel32.lib;user32.lib;gdi32.lib;winspool.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;comdlg32.lib;advapi32.lib;C:\Program Files\PCL 1.8.0\3rdParty\Boost\lib\libboost_system-vc140-mt-gd-1_61.lib;C:\Program Files\PCL 1.8.0\3rdParty\Boost\lib\libboost_filesystem-vc140-mt-gd-1_61.lib;C:\Program Files\PCL 1.8.0\3rdParty\Boost\lib\libboost_thread-vc140-mt-gd-1_61.lib;C:\Program Files\PCL 1.8.0\3rdParty\Boost\lib\libboost_date_time-vc140-mt-gd-1_61.lib;C:\Program Files\PCL 1.8.0\3rdParty\Boost\lib\libboost_iostreams-vc140-mt-gd-1_61.lib;C:\Program Files\PCL 1.8.0\3rdParty\Boost\lib\libboost_serialization-vc140-mt-gd-1_61.lib;C:\Program Files\PCL 1.8.0\3rdParty\Boost\lib\libboost_chrono-vc140-mt-gd-1_61.lib;C:\Program Files\PCL 1.8.0\3rdParty\Boost\lib\libboost_atomic-vc140-mt-gd-1_61.lib;C:\Program Files\PCL 1.8.0\3rdParty\Boost\lib\libboost_regex-vc140-mt-gd-1_61.lib;C:\Program Files\PCL 1.8.0\lib\pcl_common_debug.lib;C:\Program Files\PCL 1.8.0\lib\pcl_octree_debug.lib;C:\Program Files\PCL 1.8.0\3rdParty\OpenNI2\Lib\OpenNI2.lib;C:\Program Files\PCL 1.8.0\3rdParty\VTK\lib\vtksqlite-7.0d.lib;C:\Program Files\PCL 1.8.0\lib\pcl_io_debug.lib;C:\Program Files\PCL 1.8.0\3rdParty\FLANN\lib\flann_cpp_s-gd.lib;C:\Program Files\PCL 1.8.0\lib\pcl_kdtree_debug.lib;C:\Program Files\PCL 1.8.0\lib\pcl_search_debug.lib;C:\Program Files\PCL 1.8.0\lib\pcl_sample_consensus_debug.lib;C:\Program Files\PCL 1.8.0\lib\pcl_filters_debug.lib;C:\Program Files\PCL 1.8.0\lib\pcl_features_debug.lib;C:\Program Files\PCL 1.8.0\lib\pcl_ml_debug.lib;C:\Program Files\PCL 1.8.0\lib\pcl_segmentation_debug.lib;C:\Program Files\PCL 1.8.0\lib\pcl_visualization_debug.lib;C:\Program Files\PCL 1.8.0\3rdParty\Qhull\lib\qhullstatic_d.lib;C:\Program Files\PCL 1.8.0\lib\pcl_surface_debug.lib;C:\Program Files\PCL 1.8.0\lib\pcl_registration_debug.lib;C:\Program Files\PCL 1.8.0\lib\pcl_keypoints_debug.lib;C:\Program Files\PCL 1.8.0\lib\pcl_tracking_debug.lib;C:\Program Files\PCL 1.8.0\lib\pcl_recognition_debug.lib;C:\Program Files\PCL 1.8.0\lib\pcl_stereo_debug.lib;C:\Program Files\PCL 1.8.0\lib\pcl_outofcore_debug.lib;C:\Program Files\PCL 1.8.0\lib\pcl_people_debug.lib;C:\Program Files\PCL 1.8.0\3rdParty\VTK\lib\vtkDomainsChemistry-7.0d.lib;C:\Program Files\PCL 1.8.0\3rdParty\VTK\lib\vtkFiltersFlowPaths-7.0d.lib;C:\Program Files\PCL 1.8.0\3rdParty\VTK\lib\vtkFiltersGeneric-7.0d.lib;C:\Program Files\PCL 1.8.0\3rdParty\VTK\lib\vtkFiltersHyperTree-7.0d.lib;C:\Program Files\PCL 1.8.0\3rdParty\VTK\lib\vtkFiltersParallelImaging-7.0d.lib;C:\Program Files\PCL 1.8.0\3rdParty\VTK\lib\vtkFiltersProgrammable-7.0d.lib;C:\Program Files\PCL 1.8.0\3rdParty\VTK\lib\vtkFiltersSMP-7.0d.lib;C:\Program Files\PCL 1.8.0\3rdParty\VTK\lib\vtkFiltersSelection-7.0d.lib;C:\Program Files\PCL 1.8.0\3rdParty\VTK\lib\vtkFiltersVerdict-7.0d.lib;C:\Program Files\PCL 1.8.0\3rdParty\VTK\lib\vtkverdict-7.0d.lib;C:\Program Files\PCL 1.8.0\3rdParty\VTK\lib\vtkGUISupportQtOpenGL-7.0d.lib;C:\Program Files\PCL 1.8.0\3rdParty\VTK\lib\vtkGUISupportQtSQL-7.0d.lib;C:\Program Files\PCL 1.8.0\3rdParty\VTK\lib\vtkIOSQL-7.0d.lib;C:\Program Files\PCL 1.8.0\3rdParty\VTK\lib\vtkGeovisCore-7.0d.lib;C:\Program Files\PCL 1.8.0\3rdParty\VTK\lib\vtkproj4-7.0d.lib;C:\Program Files\PCL 1.8.0\3rdParty\VTK\lib\vtkIOAMR-7.0d.lib;C:\Program Files\PCL 1.8.0\3rdParty\VTK\lib\vtkIOEnSight-7.0d.lib;C:\Program Files\PCL 1.8.0\3rdParty\VTK\lib\vtkIOExodus-7.0d.lib;C:\Program Files\PCL 1.8.0\3rdParty\VTK\lib\vtkIOExport-7.0d.lib;C:\Program Files\PCL 1.8.0\3rdParty\VTK\lib\vtkRenderingGL2PS-7.0d.lib;C:\Program Files\PCL 1.8.0\3rdParty\VTK\lib\vtkRenderingContextOpenGL-7.0d.lib;C:\Program Files\PCL 1.8.0\3rdParty\VTK\lib\vtkgl2ps-7.0d.lib;C:\Program Files\PCL 1.8.0\3rdParty\VTK\lib\vtkIOImport-7.0d.lib;C:\Program Files\PCL 1.8.0\3rdParty\VTK\lib\vtkIOInfovis-7.0d.lib;C:\Program Files\PCL 1.8.0\3rdParty\VTK\lib\vtklibxml2-7.0d.lib;C:\Program Files\PCL 1.8.0\3rdParty\VTK\lib\vtkIOLSDyna-7.0d.lib;C:\Program Files\PCL 1.8.0\3rdParty\VTK\lib\vtkIOMINC-7.0d.lib;C:\Program Files\PCL 1.8.0\3rdParty\VTK\lib\vtkIOMovie-7.0d.lib;C:\Program Files\PCL 1.8.0\3rdParty\VTK\lib\vtkoggtheora-7.0d.lib;C:\Program Files\PCL 1.8.0\3rdParty\VTK\lib\vtkIOPLY-7.0d.lib;C:\Program Files\PCL 1.8.0\3rdParty\VTK\lib\vtkIOParallel-7.0d.lib;C:\Program Files\PCL 1.8.0\3rdParty\VTK\lib\vtkjsoncpp-7.0d.lib;C:\Program Files\PCL 1.8.0\3rdParty\VTK\lib\vtkIOParallelXML-7.0d.lib;C:\Program Files\PCL 1.8.0\3rdParty\VTK\lib\vtkIOVideo-7.0d.lib;C:\Program Files\PCL 1.8.0\3rdParty\VTK\lib\vtkImagingMath-7.0d.lib;C:\Program Files\PCL 1.8.0\3rdParty\VTK\lib\vtkImagingMorphological-7.0d.lib;C:\Program Files\PCL 1.8.0\3rdParty\VTK\lib\vtkImagingStatistics-7.0d.lib;C:\Program Files\PCL 1.8.0\3rdParty\VTK\lib\vtkImagingStencil-7.0d.lib;C:\Program Files\PCL 1.8.0\3rdParty\VTK\lib\vtkInteractionImage-7.0d.lib;C:\Program Files\PCL 1.8.0\3rdParty\VTK\lib\vtkRenderingImage-7.0d.lib;C:\Program Files\PCL 1.8.0\3rdParty\VTK\lib\vtkRenderingLIC-7.0d.lib;C:\Program Files\PCL 1.8.0\3rdParty\VTK\lib\vtkRenderingLOD-7.0d.lib;C:\Program Files\PCL 1.8.0\3rdParty\VTK\lib\vtkRenderingQt-7.0d.lib;C:\Program Files\PCL 1.8.0\3rdParty\VTK\lib\vtkRenderingVolumeOpenGL-7.0d.lib;C:\Program Files\PCL 1.8.0\3rdParty\VTK\lib\vtkViewsContext2D-7.0d.lib;C:\Program Files\PCL 1.8.0\3rdParty\VTK\lib\vtkViewsQt-7.0d.lib;C:\Program Files\PCL 1.8.0\3rdParty\VTK\lib\vtkFiltersAMR-7.0d.lib;C:\Program Files\PCL 1.8.0\3rdParty\VTK\lib\vtkFiltersParallel-7.0d.lib;C:\Program Files\PCL 1.8.0\3rdParty\VTK\lib\vtkexoIIc-7.0d.lib;C:\Program Files\PCL 1.8.0\3rdParty\VTK\lib\vtkIONetCDF-7.0d.lib;C:\Program Files\PCL 1.8.0\3rdParty\VTK\lib\vtkNetCDF_cxx-7.0d.lib;C:\Program Files\PCL 1.8.0\3rdParty\VTK\lib\vtkNetCDF-7.0d.lib;C:\Program Files\PCL 1.8.0\3rdParty\VTK\lib\vtkhdf5_hl-7.0d.lib;C:\Program Files\PCL 1.8.0\3rdParty\VTK\lib\vtkhdf5-7.0d.lib;C:\Program Files\PCL 1.8.0\3rdParty\VTK\lib\vtkParallelCore-7.0d.lib;C:\Program Files\PCL 1.8.0\3rdParty\VTK\lib\vtkIOXML-7.0d.lib;C:\Program Files\PCL 1.8.0\3rdParty\VTK\lib\vtkIOGeometry-7.0d.lib;C:\Program Files\PCL 1.8.0\3rdParty\VTK\lib\vtkIOXMLParser-7.0d.lib;C:\Program Files\PCL 1.8.0\3rdParty\VTK\lib\vtkexpat-7.0d.lib;C:\Program Files\PCL 1.8.0\3rdParty\VTK\lib\vtkIOLegacy-7.0d.lib;C:\Program Files\PCL 1.8.0\3rdParty\VTK\lib\vtkFiltersTexture-7.0d.lib;C:\Program Files\PCL 1.8.0\3rdParty\VTK\lib\vtkGUISupportQt-7.0d.lib;C:\Program Files\PCL 1.8.0\3rdParty\VTK\lib\vtkRenderingOpenGL-7.0d.lib;C:\Program Files\PCL 1.8.0\3rdParty\VTK\lib\vtkViewsInfovis-7.0d.lib;C:\Program Files\PCL 1.8.0\3rdParty\VTK\lib\vtkChartsCore-7.0d.lib;C:\Program Files\PCL 1.8.0\3rdParty\VTK\lib\vtkRenderingContext2D-7.0d.lib;C:\Program Files\PCL 1.8.0\3rdParty\VTK\lib\vtkFiltersImaging-7.0d.lib;C:\Program Files\PCL 1.8.0\3rdParty\VTK\lib\vtkInfovisLayout-7.0d.lib;C:\Program Files\PCL 1.8.0\3rdParty\VTK\lib\vtkInfovisCore-7.0d.lib;C:\Program Files\PCL 1.8.0\3rdParty\VTK\lib\vtkViewsCore-7.0d.lib;C:\Program Files\PCL 1.8.0\3rdParty\VTK\lib\vtkInteractionWidgets-7.0d.lib;C:\Program Files\PCL 1.8.0\3rdParty\VTK\lib\vtkFiltersHybrid-7.0d.lib;C:\Program Files\PCL 1.8.0\3rdParty\VTK\lib\vtkImagingGeneral-7.0d.lib;C:\Program Files\PCL 1.8.0\3rdParty\VTK\lib\vtkImagingSources-7.0d.lib;C:\Program Files\PCL 1.8.0\3rdParty\VTK\lib\vtkFiltersModeling-7.0d.lib;C:\Program Files\PCL 1.8.0\3rdParty\VTK\lib\vtkInteractionStyle-7.0d.lib;C:\Program Files\PCL 1.8.0\3rdParty\VTK\lib\vtkImagingHybrid-7.0d.lib;C:\Program Files\PCL 1.8.0\3rdParty\VTK\lib\vtkIOImage-7.0d.lib;C:\Program Files\PCL 1.8.0\3rdParty\VTK\lib\vtkDICOMParser-7.0d.lib;C:\Program Files\PCL 1.8.0\3rdParty\VTK\lib\vtkIOCore-7.0d.lib;C:\Program Files\PCL 1.8.0\3rdParty\VTK\lib\vtkmetaio-7.0d.lib;comctl32.lib;wsock32.lib;C:\Program Files\PCL 1.8.0\3rdParty\VTK\lib\vtkpng-7.0d.lib;C:\Program Files\PCL 1.8.0\3rdParty\VTK\lib\vtktiff-7.0d.lib;C:\Program Files\PCL 1.8.0\3rdParty\VTK\lib\vtkjpeg-7.0d.lib;C:\Program Files\PCL 1.8.0\3rdParty\VTK\lib\vtkRenderingAnnotation-7.0d.lib;C:\Program Files\PCL 1.8.0\3rdParty\VTK\lib\vtkImagingColor-7.0d.lib;C:\Program Files\PCL 1.8.0\3rdParty\VTK\lib\vtkRenderingVolume-7.0d.lib;C:\Program Files\PCL 1.8.0\3rdParty\VTK\lib\vtkRenderingLabel-7.0d.lib;C:\Program Files\PCL 1.8.0\3rdParty\VTK\lib\vtkRenderingFreeType-7.0d.lib;C:\Program Files\PCL 1.8.0\3rdParty\VTK\lib\vtkRenderingCore-7.0d.lib;C:\Program Files\PCL 1.8.0\3rdParty\VTK\lib\vtkCommonColor-7.0d.lib;C:\Program Files\PCL 1.8.0\3rdParty\VTK\lib\vtkFiltersExtraction-7.0d.lib;C:\Program Files\PCL 1.8.0\3rdParty\VTK\lib\vtkFiltersStatistics-7.0d.lib;C:\Program Files\PCL 1.8.0\3rdParty\VTK\lib\vtkImagingFourier-7.0d.lib;C:\Program Files\PCL 1.8.0\3rdParty\VTK\lib\vtkImagingCore-7.0d.lib;C:\Program Files\PCL 1.8.0\3rdParty\VTK\lib\vtkalglib-7.0d.lib;C:\Program Files\PCL 1.8.0\3rdParty\VTK\lib\vtkFiltersGeometry-7.0d.lib;C:\Program Files\PCL 1.8.0\3rdParty\VTK\lib\vtkFiltersSources-7.0d.lib;C:\Program Files\PCL 1.8.0\3rdParty\VTK\lib\vtkFiltersGeneral-7.0d.lib;C:\Program Files\PCL 1.8.0\3rdParty\VTK\lib\vtkFiltersCore-7.0d.lib;C:\Program Files\PCL 1.8.0\3rdParty\VTK\lib\vtkCommonExecutionModel-7.0d.lib;C:\Program Files\PCL 1.8.0\3rdParty\VTK\lib\vtkCommonComputationalGeometry-7.0d.lib;C:\Program Files\PCL 1.8.0\3rdParty\VTK\lib\vtkCommonDataModel-7.0d.lib;C:\Program Files\PCL 1.8.0\3rdParty\VTK\lib\vtkCommonMisc-7.0d.lib;C:\Program Files\PCL 1.8.0\3rdParty\VTK\lib\vtkCommonTransforms-7.0d.lib;C:\Program Files\PCL 1.8.0\3rdParty\VTK\lib\vtkCommonMath-7.0d.lib;C:\Program Files\PCL 1.8.0\3rdParty\VTK\lib\vtkCommonSystem-7.0d.lib;C:\Program Files\PCL 1.8.0\3rdParty\VTK\lib\vtkCommonCore-7.0d.lib;C:\Program Files\PCL 1.8.0\3rdParty\VTK\lib\vtksys-7.0d.lib;ws2_32.lib;Psapi.lib;C:\Program Files\PCL 1.8.0\3rdParty\VTK\lib\vtkfreetype-7.0d.lib;C:\Program Files\PCL 1.8.0\3rdParty\VTK\lib\vtkzlib-7.0d.lib;Qt5Widgetsd.lib;Qt5Guid.lib;Qt5Cored.lib;qtmaind.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <PreprocessorDefinitions>UNICODE;WIN32;WIN64;QT_DLL;QT_NO_DEBUG;NDEBUG;QT_CORE_LIB;QT_GUI_LIB;QT_WIDGETS_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>.\GeneratedFiles;.;$(QTDIR)\include;.\GeneratedFiles\$(ConfigurationName);$(QTDIR)\include\QtCore;$(QTDIR)\include\QtGui;$(QTDIR)\include\QtWidgets;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <DebugInformationFormat />
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <TreatWChar_tAsBuiltInType>true</TreatWChar_tAsBuiltInType>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <OutputFile>$(OutDir)\$(ProjectName).exe</OutputFile>
+      <AdditionalLibraryDirectories>$(QTDIR)\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <GenerateDebugInformation>false</GenerateDebugInformation>
+      <AdditionalDependencies>qtmain.lib;Qt5Core.lib;Qt5Gui.lib;Qt5Widgets.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="GeneratedFiles\Debug\moc_QtGuiApplication1.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\qrc_QtGuiApplication1.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+      </PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+      </PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="GeneratedFiles\Release\moc_QtGuiApplication1.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="main.cpp" />
+    <ClCompile Include="QtGuiApplication1.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="QtGuiApplication1.h">
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">$(QTDIR)\bin\moc.exe;%(FullPath)</AdditionalInputs>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Moc%27ing QtGuiApplication1.h...</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">.\GeneratedFiles\$(ConfigurationName)\moc_%(Filename).cpp</Outputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">"$(QTDIR)\bin\moc.exe"  "%(FullPath)" -o ".\GeneratedFiles\$(ConfigurationName)\moc_%(Filename).cpp"  -DUNICODE -DWIN32 -DWIN64 -DQT_DLL -DQT_CORE_LIB -DQT_GUI_LIB -DQT_WIDGETS_LIB -D_WINDOWS -D_DEBUG -DDISABLE_OPENNI -DDISABLE_ENSENSO -DDISABLE_DAVIDSDK -DDISABLE_DSSDK -DDISABLE_RSSDK -DDISABLE_PCAP -DDISABLE_PNG -DvtkRenderingContext2D_AUTOINIT=1(vtkRenderingContextOpenGL) -DvtkRenderingCore_INCLUDE=\"E:/pcl_viewer/build/CMakeFiles/vtkRenderingCore_AUTOINIT_vtkInteractionStyle_vtkRenderingFreeType_vtkRenderingOpenGL.h\" -DvtkRenderingVolume_AUTOINIT=1(vtkRenderingVolumeOpenGL) -DEIGEN_USE_NEW_STDVECTOR -DEIGEN_YES_I_KNOW_SPARSE_MODULE_IS_NOT_STABLE_YET -DBOOST_ALL_NO_LIB -DFLANN_STATIC -DCMAKE_INTDIR=\"Debug\"  "-I.\GeneratedFiles" "-I." "-I$(QTDIR)\include" "-I.\GeneratedFiles\$(ConfigurationName)\." "-I$(QTDIR)\include\QtCore" "-I$(QTDIR)\include\QtGui" "-I$(QTDIR)\include\QtWidgets" "-IC:\Program Files\PCL 1.8.0\3rdParty\VTK\include\vtk-7.0" "-IC:\Program Files\PCL 1.8.0\include\pcl-1.8" "-IC:\Program Files\PCL 1.8.0\3rdParty\Eigen\eigen3" "-IC:\Program Files\PCL 1.8.0\3rdParty\Boost\include\boost-1_61" "-IC:\Program Files\PCL 1.8.0\3rdParty\OpenNI2\Include" "-IC:\Program Files\PCL 1.8.0\3rdParty\FLANN\include" "-IC:\Program Files\PCL 1.8.0\3rdParty\Qhull\include" "-IC:\Program Files\PCL 1.8.0\3rdParty\VTK\include"</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">$(QTDIR)\bin\moc.exe;%(FullPath)</AdditionalInputs>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Moc%27ing QtGuiApplication1.h...</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">.\GeneratedFiles\$(ConfigurationName)\moc_%(Filename).cpp</Outputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">"$(QTDIR)\bin\moc.exe"  "%(FullPath)" -o ".\GeneratedFiles\$(ConfigurationName)\moc_%(Filename).cpp"  -DUNICODE -DWIN32 -DWIN64 -DQT_DLL -DQT_NO_DEBUG -DNDEBUG -DQT_CORE_LIB -DQT_GUI_LIB -DQT_WIDGETS_LIB "-I.\GeneratedFiles" "-I." "-I$(QTDIR)\include" "-I.\GeneratedFiles\$(ConfigurationName)\." "-I$(QTDIR)\include\QtCore" "-I$(QTDIR)\include\QtGui" "-I$(QTDIR)\include\QtWidgets"</Command>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="QtGuiApplication1.ui">
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">$(QTDIR)\bin\uic.exe;%(AdditionalInputs)</AdditionalInputs>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Uic%27ing %(Identity)...</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">.\GeneratedFiles\ui_%(Filename).h;%(Outputs)</Outputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">"$(QTDIR)\bin\uic.exe" -o ".\GeneratedFiles\ui_%(Filename).h" "%(FullPath)"</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">$(QTDIR)\bin\uic.exe;%(AdditionalInputs)</AdditionalInputs>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Uic%27ing %(Identity)...</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">.\GeneratedFiles\ui_%(Filename).h;%(Outputs)</Outputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">"$(QTDIR)\bin\uic.exe" -o ".\GeneratedFiles\ui_%(Filename).h" "%(FullPath)"</Command>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="GeneratedFiles\ui_QtGuiApplication1.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="QtGuiApplication1.qrc">
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">%(FullPath);%(AdditionalInputs)</AdditionalInputs>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Rcc%27ing %(Identity)...</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">.\GeneratedFiles\qrc_%(Filename).cpp;%(Outputs)</Outputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">"$(QTDIR)\bin\rcc.exe" -name "%(Filename)" -no-compress "%(FullPath)" -o .\GeneratedFiles\qrc_%(Filename).cpp</Command>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">%(FullPath);%(AdditionalInputs)</AdditionalInputs>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Rcc%27ing %(Identity)...</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">.\GeneratedFiles\qrc_%(Filename).cpp;%(Outputs)</Outputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">"$(QTDIR)\bin\rcc.exe" -name "%(Filename)" -no-compress "%(FullPath)" -o .\GeneratedFiles\qrc_%(Filename).cpp</Command>
+    </CustomBuild>
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+  <ProjectExtensions>
+    <VisualStudio>
+      <UserProperties MocDir=".\GeneratedFiles\$(ConfigurationName)" UicDir=".\GeneratedFiles" RccDir=".\GeneratedFiles" lupdateOptions="" lupdateOnBuild="0" lreleaseOptions="" Qt5Version_x0020_x64="msvc2015_64" MocOptions="" />
+    </VisualStudio>
+  </ProjectExtensions>
+</Project>
